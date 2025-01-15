@@ -10,7 +10,7 @@ return {
     local opts = { noremap = true, silent = true, desc = "Git Conflict" }
     map(
       "n",
-      "<leader>go",
+      "<leader>gw",
       ":GitConflictChooseOurs<CR>",
       vim.tbl_extend("force", opts, { desc = "GitConflict - Escolher mudanças nossas" })
     )

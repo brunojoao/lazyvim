@@ -12,25 +12,25 @@ return {
       "n",
       "<leader>go",
       ":GitConflictChooseOurs<CR>",
-      vim.tbl_extend("force", opts, { desc = "Escolher mudanças nossas" })
+      vim.tbl_extend("force", opts, { desc = "GitConflict - Escolher mudanças nossas" })
     )
     map(
       "n",
       "<leader>gt",
       ":GitConflictChooseTheirs<CR>",
-      vim.tbl_extend("force", opts, { desc = "Escolher mudanças deles" })
+      vim.tbl_extend("force", opts, { desc = "GitConflict - Escolher mudanças deles" })
     )
     map(
       "n",
       "<leader>ga",
       ":GitConflictChooseBoth<CR>",
-      vim.tbl_extend("force", opts, { desc = "Escolher ambas mudanças" })
+      vim.tbl_extend("force", opts, { desc = "GitConflict - Escolher ambas mudanças" })
     )
     map(
       "n",
       "<leader>gn",
       ":GitConflictChooseNone<CR>",
-      vim.tbl_extend("force", opts, { desc = "Escolher nenhuma mudança" })
+      vim.tbl_extend("force", opts, { desc = "GitConflict - Escolher nenhuma mudança" })
     )
     map("n", "]x", ":GitConflictNextConflict<CR>", vim.tbl_extend("force", opts, { desc = "Próximo conflito" }))
     map("n", "[x", ":GitConflictPrevConflict<CR>", vim.tbl_extend("force", opts, { desc = "Conflito anterior" }))
@@ -38,7 +38,7 @@ return {
       "n",
       "<leader>gq",
       ":GitConflictListQf<CR>",
-      vim.tbl_extend("force", opts, { desc = "Listar conflitos no quickfix" })
+      vim.tbl_extend("force", opts, { desc = "GitConflict - Listar conflitos no quickfix" })
     )
   end,
 }

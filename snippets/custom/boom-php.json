@@ -24,7 +24,7 @@
       "\t\\$result = \\$statement->execute(\\$sqlBuild[\"parameters\"]);",
       "\treturn \\$result->getAffectedRows() > 0;",
 	  "\t} catch (Exception \\$e) {",
-	  "\thandleException(\\$e, '${2:module_name}', false, json_encode(\\$sqlBuild));",
+	  "\thandleException(\\$e, '${3:module_name}', false, json_encode(\\$sqlBuild));",
 	  "}"
     ],
     "description": "Construtor de operações de update no banco de dados utilizando SqlBuild."

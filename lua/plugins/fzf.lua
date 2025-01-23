@@ -19,6 +19,13 @@ return {
           ["--history"] = vim.fn.stdpath("data") .. "/fzf-lua-grep-history",
         },
       },
+      actions = {
+        ["default"] = function(selected)
+          local path = selected[1]
+          vim.cmd("e " .. path)
+          vim.cmd("checktime") -- Verifica se o arquivo foi modificado externamente
+        end,
+      },
     })
   end,
 }

@@ -4,8 +4,8 @@ return {
     return vim.tbl_deep_extend("force", opts, {
       keymap = {
         fzf = {
-          ["down"] = "next-history",
-          ["up"] = "prev-history",
+          ["alt-up"] = "next-history",
+          ["alt-down"] = "prev-history",
         },
       },
       files = {

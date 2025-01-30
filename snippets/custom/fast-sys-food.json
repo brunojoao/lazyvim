@@ -31,7 +31,7 @@
     "prefix": ["fsf_view_logged_js"],
     "body": [
       "<?= \\$this->section('js') ?>",
-      "<script src=\"<?= base_url('assets/fastsysfood/js/modules/${1:module_name}/${2:filename}/script.js') ?>\"></script>",
+      "<script src=\"<?= base_url('assets/fastsysfood/js/modules/${1:module_name}/${2:filename}.js') ?>\"></script>",
       "<?= \\$this->endSection() ?>"
     ],
     "description": "Snippet para fastsysfood para adicionar JS em um template que extende o layout de logado"

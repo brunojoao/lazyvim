@@ -17,5 +17,23 @@
       "<?= $this->endSection() ?>"
     ],
     "description": "Snippet para fastsysfood para criar um tpl que extende o layout de logado"
+  },
+  "view-logged-css": {
+    "prefix": ["fsf_view_logged_css"],
+    "body": [
+      "<?= $this->section('css') ?>",
+      "<link rel=\"stylesheet\" href=\"<?= base_url(\"assets/fastsysfood/css/modules/{1:module_name}/{2:filename}.css\") ?>\">",
+      "<?= $this->endSection() ?>"
+    ],
+    "description": "Snippet para fastsysfood para adicionar CSS em um template que extende o layout de logado"
+  },
+  "view-logged-js": {
+    "prefix": ["fsf_view_logged_js"],
+    "body": [
+      "<?= $this->section('js') ?>",
+      "<script src=\"<?= base_url('assets/fastsysfood/js/modules/{1:module_name}/{2:filename}/script.js') ?>\"></script>",
+      "<?= $this->endSection() ?>"
+    ],
+    "description": "Snippet para fastsysfood para adicionar JS em um template que extende o layout de logado"
   }
 }

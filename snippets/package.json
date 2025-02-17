@@ -8,6 +8,10 @@
       {
         "language": "php",
         "path": "./custom/boom-php.json"
+      },
+      {
+        "language": "php",
+        "path": "./custom/fast-sys-food.json"
       }
     ]
   }

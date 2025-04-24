@@ -14,8 +14,8 @@
     "body": [
       "<?= view_cell('App\\Cells\\Components\\Bulma\\MessageCell', [",
       "\t\"titleType\" => \"${1:title}\",",
-      "\t\"type\" => \"${1|warning,success,danger,info,link,dark|}\",",
-      "\t\"msg\" => \"${2:message}\"",
+      "\t\"type\" => \"${2|warning,success,danger,info,link,dark|}\",",
+      "\t\"msg\" => \"${3:message}\"",
       "]) ?>"
     ],
     "description": "Boom snippet para renderizar messagens Bulma (warning, success, danger, info)"

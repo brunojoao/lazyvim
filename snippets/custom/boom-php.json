@@ -1,37 +1,31 @@
 {
-  "boom_db_insert": {
-    "prefix": ["boom_db_insert"],
+  "boom_cell_notification": {
+    "prefix": ["boom_cell_notification"],
     "body": [
-      "try {",
-      "\t\\$sqlBuild = SqlBuild::insert(\"sis_${1:table_name}\", \\$data);",
-      "\t\\$statement = \\$this->adapter->createStatement(\\$sqlBuild[\"sql\"]);",
-      "\t\\$statement->execute(\\$sqlBuild[\"parameters\"]);",
-      "\t\\$lastInsertId = \\$this->adapter->getDriver()->getLastGeneratedValue();",
-	  "\treturn \\$lastInsertId;",
-	  "\t} catch (Exception \\$e) {",
-	  "\thandleException(\\$e, '${2:module_name}', false, json_encode(\\$sqlBuild));",
-	  "}"
+      "<?= view_cell('App\\Cells\\Components\\Bulma\\NotificationCell', [",
+      "\t\"type\" => \"${1|warning,success,danger,info|}\",",
+      "\t\"msg\" => \"${2:message}\"",
+      "]) ?>"
     ],
-    "description": "Boom snippet para inset com proteção de injection"
+    "description": "Boom snippet para renderizar notificação Bulma (warning, success, danger, info)"
   },
-  "boom_db_update": {
-    "prefix": ["boom_db_update"],
+  "boom_cell_logo": {
+    "prefix": ["boom_cell_logo"],
     "body": [
-      "try {",
-      "\t\\$criteria = ['${1:key}_id' => ${2:value}];",
-      "\t\\$sqlBuild = SqlBuild::update(\"sis_${1:table_name}\",\\$data, \\$criteria);",
-      "\t\\$statement = \\$this->adapter->createStatement(\\$sqlBuild[\"sql\"]);",
-      "\t\\$result = \\$statement->execute(\\$sqlBuild[\"parameters\"]);",
-      "\treturn \\$result->getAffectedRows() > 0;",
-	  "\t} catch (Exception \\$e) {",
-	  "\thandleException(\\$e, '${3:module_name}', false, json_encode(\\$sqlBuild));",
-	  "}"
+      "<?= view_cell('App\\Cells\\Components\\Logos\\LogoMainCell', [",
+      "\t'class' => '${1:ml-4}'",
+      "]) ?>"
     ],
-    "description": "Construtor de operações de update no banco de dados utilizando SqlBuild."
+    "description": "Boom snippet para renderizar o logo principal"
   },
-  "boom_handle_exception": {
-    "prefix": ["boom_handle_exception"],
-    "body": ["handleException(\\$e, '${1:module_name}', false);"],
-    "description": "Construtor de operações de update no banco de dados utilizando SqlBuild."
+  "boom_url_asset": {
+    "prefix": ["boom_url_asset"],
+    "body": ["<?= link_tag(base_url_assets('${1:path/to/file.css}')) ?>"],
+    "description": "Boom snippet para incluir assets locais (base_url_assets)"
+  },
+  "boom_url_cdn": {
+    "prefix": ["boom_url_cdn"],
+    "body": ["<?= link_tag(base_url_cdn('${1:path/to/file.css}')); ?>"],
+    "description": "Boom snippet para incluir recursos de CDN (base_url_cdn)"
   }
 }

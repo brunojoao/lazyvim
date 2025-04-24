@@ -18,14 +18,28 @@
     ],
     "description": "Boom snippet para renderizar o logo principal"
   },
-  "boom_url_asset": {
-    "prefix": ["boom_url_asset"],
-    "body": ["<?= link_tag(base_url_assets('${1:path/to/file.css}')) ?>"],
+  "boom_url_css_assets": {
+    "prefix": ["boom_url_css_asset"],
+    "body": [
+      "<?= link_tag(base_url_assets('${1|auth/,global/,modules/|}')) ?>"
+    ],
     "description": "Boom snippet para incluir assets locais (base_url_assets)"
   },
-  "boom_url_cdn": {
-    "prefix": ["boom_url_cdn"],
-    "body": ["<?= link_tag(base_url_cdn('${1:path/to/file.css}')); ?>"],
+  "boom_url_css_cdn": {
+    "prefix": ["boom_url_css_cdn"],
+    "body": ["<?= link_tag(base_url_cdn('${1:lib/version/file.min.css}')); ?>"],
+    "description": "Boom snippet para incluir recursos de CDN (base_url_cdn)"
+  },
+  "boom_url_js_assets": {
+    "prefix": ["boom_url_js_asset"],
+    "body": [
+      "<?= script_tag(base_url_assets('${1|auth/,global/,modules/|}')) ?>"
+    ],
+    "description": "Boom snippet para incluir assets locais (base_url_assets)"
+  },
+  "boom_url_js_cdn": {
+    "prefix": ["boom_url_js_cdn"],
+    "body": ["<?= script_tag(base_url_cdn('${1:lib/version/file.min.js}')); ?>"],
     "description": "Boom snippet para incluir recursos de CDN (base_url_cdn)"
   }
 }

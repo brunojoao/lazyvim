@@ -13,7 +13,8 @@
     "prefix": ["boom_cell_message"],
     "body": [
       "<?= view_cell('App\\Cells\\Components\\Bulma\\MessageCell', [",
-      "\t\"type\" => \"${1|warning,success,danger,info|}\",",
+      "\t\"titleType\" => \"${1:title}\"",
+      "\t\"type\" => \"${1|warning,success,danger,info,link,dark|}\",",
       "\t\"msg\" => \"${2:message}\"",
       "]) ?>"
     ],
@@ -23,7 +24,6 @@
     "prefix": ["boom_cell_logo"],
     "body": [
       "<?= view_cell('App\\Cells\\Components\\Logos\\LogoMainCell', [",
-      "\t'titleType' => '${1:title}'",
       "\t'class' => '${1:ml-4}'",
       "]) ?>"
     ],

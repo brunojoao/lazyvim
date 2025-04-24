@@ -23,6 +23,7 @@
     "prefix": ["boom_cell_logo"],
     "body": [
       "<?= view_cell('App\\Cells\\Components\\Logos\\LogoMainCell', [",
+      "\t'titleType' => '${1:title}'",
       "\t'class' => '${1:ml-4}'",
       "]) ?>"
     ],

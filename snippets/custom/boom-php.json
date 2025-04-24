@@ -13,7 +13,7 @@
     "prefix": ["boom_cell_message"],
     "body": [
       "<?= view_cell('App\\Cells\\Components\\Bulma\\MessageCell', [",
-      "\t\"titleType\" => \"${1:title}\"",
+      "\t\"titleType\" => \"${1:title}\",",
       "\t\"type\" => \"${1|warning,success,danger,info,link,dark|}\",",
       "\t\"msg\" => \"${2:message}\"",
       "]) ?>"
@@ -50,7 +50,9 @@
   },
   "boom_url_js_cdn": {
     "prefix": ["boom_url_js_cdn"],
-    "body": ["<?= script_tag(base_url_cdn('${1:lib/version/file.min.js}')); ?>"],
+    "body": [
+      "<?= script_tag(base_url_cdn('${1:lib/version/file.min.js}')); ?>"
+    ],
     "description": "Boom snippet para incluir recursos de CDN (base_url_cdn)"
   }
 }

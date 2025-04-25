@@ -55,5 +55,24 @@
       "<?= script_tag(base_url_cdn('${1:lib/version/file.min.js}')); ?>"
     ],
     "description": "Boom snippet para incluir recursos de CDN (base_url_cdn)"
+  },
+  "boom_view_logged-in": {
+    "prefix": ["boom_view_logged-in"],
+    "body": [
+      "<?= $this->extend(\"layouts/logged-in\"); ?>",
+      "",
+      "<!-- CSS -->",
+      "<?= $this->section(\"css\") ?>",
+      "<?= $this->endSection(); ?>",
+      "",
+      "<!-- JS -->",
+      "<?= $this->section(\"js\") ?>",
+      "<?= $this->endSection(); ?>",
+      "",
+      "<?= $this->section(\"content\") ?>",
+      "<h1 class=\"title\">${0:title}</h1>",
+      "<?= $this->endSection() ?>"
+    ],
+    "description": "Template básico para views com layout logged-in."
   }
 }

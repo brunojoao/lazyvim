@@ -91,13 +91,13 @@
   "boom_bulma_switch": {
     "prefix": ["boom_bulma_switch"],
     "body": [
-      "<!-- Adicione o CSS do Bulma Switch via CDN -->",
-      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bulma-switch@2.0.0/dist/css/bulma-switch.min.css\">",
+      "<!-- Adicione o CSS do Bulma Switch via CDN na seção css -->",
+      "link_tag(base_url_cdn('bulma-switch-control/1.1.1/css/main.min.css'))",
       "",
       "<div class=\"control\">",
       "\t<label class=\"switch is-rounded\">",
-      "\t\t<input type=\"checkbox\" value=\"${1|false,true|}\" ${2|checked,'''|}>",
-      "\t\t<span class=\"check ${3|is-info,is-primary,is-success,is-warning,is-danger,has-background-dark-blue|}\"></span>",
+      "\t\t<input type=\"checkbox\" ${2|checked,'''|}>",
+      "\t\t<span class=\"check\"></span>",
       "\t\t<span class=\"control-label\">${4:LabelDescription}</span>",
       "\t</label>",
       "</div>"

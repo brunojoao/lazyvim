@@ -21,6 +21,13 @@
     ],
     "description": "Boom snippet para renderizar messagens Bulma (warning, success, danger, info)"
   },
+  "boom_cell_flashmessage": {
+    "prefix": ["boom_cell_flashmessage"],
+    "body": [
+      "<?= view_cell('App\\Cells\\Components\\Boom\\FlashMessageCell'); ?>"
+    ],
+    "description": "Boom snippet para renderizar messagens Bulma (warning, success, danger, info)"
+  },
   "boom_cell_button": {
     "prefix": ["boom_cell_button"],
     "body": [

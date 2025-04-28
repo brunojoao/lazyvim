@@ -110,5 +110,19 @@
       "</div>"
     ],
     "description": "Boom snippet para criar um switch estilizado com Bulma Switch (CDN incluso)"
+  },
+  "boom_flash_redirect_success": {
+    "prefix": ["boom_flash_success"],
+    "body": [
+      "return \\$this->flashRedirectSuccess('${1:modules.admin.organizacao}', '${2:Mensagem de sucesso!}');"
+    ],
+    "description": "Snippet para redirecionar com mensagem de sucesso."
+  },
+  "boom_flash_redirect_error": {
+    "prefix": ["boom_flash_error"],
+    "body": [
+      "return $this->flashRedirectError('${1:modules.admin.organizacao.new}', $data, $organizacaoModel->errors());"
+    ],
+    "description": "Snippet para redirecionar com mensagem de erro."
   }
 }

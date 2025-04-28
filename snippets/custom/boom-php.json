@@ -21,6 +21,19 @@
     ],
     "description": "Boom snippet para renderizar messagens Bulma (warning, success, danger, info)"
   },
+  "boom_cell_button": {
+    "prefix": ["boom_cell_button"],
+    "body": [
+      "<?= view_cell('App\\Cells\\Components\\Bulma\\ButtonCell', [",
+      "\t\"id\" => \"${1:optional}\",",
+      "\t\"class\" => \"${1:text|text-hover|null(optional)}\",",
+      "\t\"icon\" => \"${2:fa-plus}\",",
+      "\t\"href\" => route_to(${3:modules.})|optional,",
+      "\t\"label\" => \"${4:message}\"",
+      "]) ?>"
+    ],
+    "description": "Boom snippet para renderizar messagens Bulma (warning, success, danger, info)"
+  },
   "boom_cell_logo": {
     "prefix": ["boom_cell_logo"],
     "body": [
@@ -74,5 +87,21 @@
       "<?= \\$this->endSection() ?>"
     ],
     "description": "Template básico para views com layout logged-in."
+  },
+  "boom_bulma_switch": {
+    "prefix": ["boom_bulma_switch"],
+    "body": [
+      "<!-- Adicione o CSS do Bulma Switch via CDN -->",
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bulma-switch@2.0.0/dist/css/bulma-switch.min.css\">",
+      "",
+      "<div class=\"control\">",
+      "\t<label class=\"switch is-rounded\">",
+      "\t\t<input type=\"checkbox\" value=\"${1|false,true|}\" ${2|checked,'''|}>",
+      "\t\t<span class=\"check ${3|is-info,is-primary,is-success,is-warning,is-danger,has-background-dark-blue|}\"></span>",
+      "\t\t<span class=\"control-label\">${4:LabelDescription}</span>",
+      "\t</label>",
+      "</div>"
+    ],
+    "description": "Boom snippet para criar um switch estilizado com Bulma Switch (CDN incluso)"
   }
 }

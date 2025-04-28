@@ -26,10 +26,10 @@
     "body": [
       "<?= view_cell('App\\Cells\\Components\\Bulma\\ButtonCell', [",
       "\t\"id\" => \"${1:optional}\",",
-      "\t\"class\" => \"${1:text|text-hover|null(optional)}\",",
-      "\t\"icon\" => \"${2:fa-plus}\",",
-      "\t\"href\" => route_to(${3:modules.})|optional,",
-      "\t\"label\" => \"${4:message}\"",
+      "\t\"class\" => \"${2:text|text-hover|null(optional)}\",",
+      "\t\"icon\" => \"${3:fa-plus}\",",
+      "\t\"href\" => route_to(${4:modules.})|optional,",
+      "\t\"label\" => \"${5:message}\"",
       "]) ?>"
     ],
     "description": "Boom snippet para renderizar messagens Bulma (warning, success, danger, info)"

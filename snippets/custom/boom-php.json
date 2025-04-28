@@ -26,7 +26,7 @@
     "body": [
       "<?= view_cell('App\\Cells\\Components\\Boom\\FlashMessageCell'); ?>"
     ],
-    "description": "Boom snippet para renderizar messagens Bulma (warning, success, danger, info)"
+    "description": "Boom snippet para renderizar mensagens do formulário."
   },
   "boom_cell_button": {
     "prefix": ["boom_cell_button"],

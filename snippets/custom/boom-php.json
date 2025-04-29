@@ -2,7 +2,7 @@
   "boom_cell_notification": {
     "prefix": ["boom_cell_notification"],
     "body": [
-      "<?= view_cell('App\\Cells\\Components\\Bulma\\NotificationCell', [",
+      "<?= view_cell('App\\Cells\\Components\\Bulma\\Notification\\NotificationCell', [",
       "\t\"type\" => \"${1|warning,success,danger,info|}\",",
       "\t\"msg\" => \"${2:message}\"",
       "]) ?>"
@@ -12,7 +12,7 @@
   "boom_cell_message": {
     "prefix": ["boom_cell_message"],
     "body": [
-      "<?= view_cell('App\\Cells\\Components\\Bulma\\MessageCell', [",
+      "<?= view_cell('App\\Cells\\Components\\Bulma\\Message\\MessageCell', [",
       "\t\"titleType\" => \"${1:title}\",",
       "\t\"type\" => \"${2|warning,success,danger,info,link,dark|}\",",
       "\t\"msg\" => \"${3:message}\",",
@@ -24,7 +24,7 @@
   "boom_cell_flashmessage": {
     "prefix": ["boom_cell_flashmessage"],
     "body": [
-      "<?= view_cell('App\\Cells\\Components\\Boom\\FlashMessageCell'); ?>"
+      "<?= view_cell('App\\Cells\\Components\\Boom\\FlashMessage\\FlashMessageCell'); ?>"
     ],
     "description": "Boom snippet para renderizar mensagens do formulário."
   },
@@ -44,7 +44,7 @@
   "boom_cell_logo": {
     "prefix": ["boom_cell_logo"],
     "body": [
-      "<?= view_cell('App\\Cells\\Components\\Logos\\LogoMainCell', [",
+      "<?= view_cell('App\\Cells\\Components\\Logos\\LogoMain\\LogoMainCell', [",
       "\t'class' => '${1:ml-4}'",
       "]) ?>"
     ],

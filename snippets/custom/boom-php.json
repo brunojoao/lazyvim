@@ -21,6 +21,32 @@
     ],
     "description": "Boom snippet para renderizar messagens Bulma (warning, success, danger, info)"
   },
+  "boom_datatables_cell": {
+    "prefix": ["boom_datatables_html_cell"],
+    "body": [
+      "<?= view_cell('App\\Cells\\Components\\Boom\\DataTables\\DataTablesCell'); ?>"
+    ],
+    "description": "Boom snippet para renderizar datatable"
+  },
+  "boom_datatables_html_import_js": {
+    "prefix": ["boom_datatables_html_import_js"],
+    "body": [
+      "<?= script_tag(base_url_cdn('datatables/2.2.2/datatables.min.js')); ?>",
+      "<?= script_tag(base_url_assets('ajax/datatables.init.js')) ?>"
+    ],
+    "description": "Boom datatable preset"
+  },
+  "boom_datatables_model_trait": {
+    "prefix": ["boom_datatables_model_trait"],
+    "body": [
+      "use DataTablesTrait;",
+      "",
+      "protected array $dataTableSelect = ['maintable.*', 'jointabela.uf'];",
+      "protected array $dataTableJoins = [['jointable', 'jointable.id = maintable.estado_id']];",
+      "protected array $dataTableSearchable = ['maintable.nome', 'maintable.cidade', 'jointable.uf'];"
+    ],
+    "description": "Boom datatable preset"
+  },
   "boom_cell_logo": {
     "prefix": ["boom_cell_logo"],
     "body": [

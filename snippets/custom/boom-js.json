@@ -1,0 +1,19 @@
+{
+  "boom_datatables_init": {
+    "prefix": ["boom_datatables_init"],
+    "body": [
+      "\\$table = \\$('table.table');",
+      "",
+      "const dataTable = initDefaultDataTable(\\$table, {",
+      "    ajax: {",
+      "        url: baseUrl.concat('ajax/datatables/default/${1:model-sem-sufix-e-minusculo}'),",
+      "    },",
+      "    columns: [",
+      "        { title: '', data: 'id' },",
+      "        // Adicione outras colunas aqui",
+      "    ],",
+      "});"
+    ],
+    "description": "Boom snippet para inicializar DataTable com URL dinâmico"
+  }
+}

@@ -10,6 +10,10 @@
         "path": "./custom/boom-php.json"
       },
       {
+        "language": "javascript",
+        "path": "./custom/boom-js.json"
+      },
+      {
         "language": "php",
         "path": "./custom/fast-sys-food.json"
       }

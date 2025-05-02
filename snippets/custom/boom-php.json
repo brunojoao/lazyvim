@@ -41,9 +41,9 @@
     "body": [
       "use DataTablesTrait;",
       "",
-      "protected array $dataTableSelect = ['maintable.*', 'jointabela.uf'];",
-      "protected array $dataTableJoins = [['jointable', 'jointable.id = maintable.estado_id']];",
-      "protected array $dataTableSearchable = ['maintable.nome', 'maintable.cidade', 'jointable.uf'];"
+      "protected array \\$dataTableSelect = ['maintable.*', 'jointabela.uf'];",
+      "protected array \\$dataTableJoins = [['jointable', 'jointable.id = maintable.estado_id']];",
+      "protected array \\$dataTableSearchable = ['maintable.nome', 'maintable.cidade', 'jointable.uf'];"
     ],
     "description": "Boom datatable preset"
   },

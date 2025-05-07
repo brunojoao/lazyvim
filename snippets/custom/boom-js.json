@@ -9,7 +9,7 @@
       "        url: baseUrl.concat('ajax/datatables/default/${1:model-sem-sufix-e-minusculo}'),",
       "    },",
       "    columns: [",
-      "        { title: '', data: 'id' },",
+      "        { title: '', data: 'id', searchable: true},",
       "        // Adicione outras colunas aqui",
       "    ],",
       "});"

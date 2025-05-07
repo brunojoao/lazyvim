@@ -42,8 +42,11 @@
       "use DataTablesTrait;",
       "",
       "protected array \\$dataTableSelect = ['maintable.*', 'jointabela.uf'];",
+      "protected array \\$dataTableSelectCount = ['table.column' => 'alias_data'];",
       "protected array \\$dataTableJoins = [['jointable', 'jointable.id = maintable.estado_id']];",
-      "protected array \\$dataTableSearchable = ['maintable.nome', 'maintable.cidade', 'jointable.uf'];"
+      "protected array \\$dataTableGroupBy = ['table.column'];",
+      "protected array \\$dataTableSearchable = ['maintable.nome', 'maintable.cidade', 'jointable.uf'];",
+      "protected array \\$dataTableSearchableColumnMap = ['data' => 'table.column'];"
     ],
     "description": "Boom datatable preset"
   },
@@ -57,7 +60,7 @@
   "boom_cell_button": {
     "prefix": ["boom_cell_button"],
     "body": [
-      "<?= view_cell('App\\Cells\\Components\\Bulma\\ButtonCell', [",
+      "<?= view_cell('App\\Cells\\Components\\Bulma\\Button\\ButtonCell', [",
       "\t\"id\" => \"${1:optional}\",",
       "\t\"class\" => \"${2:text|text-hover|null(optional)}\",",
       "\t\"icon\" => \"${3:fa-plus}\",",

@@ -28,13 +28,20 @@
     ],
     "description": "Boom snippet para renderizar datatable"
   },
+  "boom_datatables_html_import_css": {
+    "prefix": ["boom_datatables_html_import_css"],
+    "body": [
+      "<?= link_tag(base_url_cdn('datatables/2.2.2/datatables.min.css')); ?>"
+    ],
+    "description": "Boom datatable preset html css"
+  },
   "boom_datatables_html_import_js": {
     "prefix": ["boom_datatables_html_import_js"],
     "body": [
       "<?= script_tag(base_url_cdn('datatables/2.2.2/datatables.min.js')); ?>",
       "<?= script_tag(base_url_assets('ajax/datatables.init.js')) ?>"
     ],
-    "description": "Boom datatable preset"
+    "description": "Boom datatable preset html js"
   },
   "boom_datatables_model_trait": {
     "prefix": ["boom_datatables_model_trait"],

@@ -31,7 +31,8 @@
   "boom_datatables_html_import_css": {
     "prefix": ["boom_datatables_html_import_css"],
     "body": [
-      "<?= link_tag(base_url_cdn('datatables/2.2.2/datatables.min.css')); ?>"
+      "<?= link_tag(base_url_cdn('datatables/2.2.2/datatables.min.css')); ?>",
+      "<?= link_tag(base_url_assets('globals/css/datatables.css')) ?>"
     ],
     "description": "Boom datatable preset html css"
   },

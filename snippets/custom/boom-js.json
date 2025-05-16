@@ -14,6 +14,7 @@
       "        // Adicione outras colunas aqui",
       "    ],",
       "  });",
+	  "//Events ...",
 	  "})();"
     ],
     "description": "Boom snippet para inicializar DataTable com URL dinâmico"

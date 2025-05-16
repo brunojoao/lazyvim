@@ -4,7 +4,8 @@
     "body": [
       "\\$table = \\$('table.table');",
       "",
-      "const dataTable = initDefaultDataTable(\\$table, {",
+	  "(async () => {",
+      "  const dataTable = await initDefaultDataTable(\\$table, {",
       "    ajax: {",
       "        url: baseUrl.concat('ajax/datatables/default/${1:model-sem-sufix-e-minusculo}'),",
       "    },",
@@ -12,7 +13,8 @@
       "        { title: '', data: 'id', searchable: true},",
       "        // Adicione outras colunas aqui",
       "    ],",
-      "});"
+      "  });",
+	  "})();"
     ],
     "description": "Boom snippet para inicializar DataTable com URL dinâmico"
   }

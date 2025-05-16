@@ -2,7 +2,7 @@
   "boom_datatables_init": {
     "prefix": ["boom_datatables_init"],
     "body": [
-      "\\$table = \\$('table.table');",
+      "const \\$table = \\$('table.table');",
       "",
 	  "(async () => {",
       "  const dataTable = await initDefaultDataTable(\\$table, {",

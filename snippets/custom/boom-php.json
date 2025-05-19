@@ -171,6 +171,7 @@
       "\t\"placeholder\" => \"${3:Digite para buscar...}\",",
       "\t\"required\" => ${4|true,false|},",
       "\t\"value\" => \"${6:}\",",
+      "\t\"valueId\" => \"${7:}\",",
       "]) ?>"
     ],
     "description": "Boom snippet para criar um AutoCompleteCell com todos os parâmetros"

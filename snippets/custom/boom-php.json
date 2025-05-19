@@ -162,17 +162,15 @@
     ],
     "description": "Snippet para redirecionar com mensagem de erro."
   },
-  "boom_autocomplete_cell": {
-    "prefix": ["boom_autocomplete_cell"],
+  "boom_cell_autocomplete": {
+    "prefix": ["boom_cell_autocomplete"],
     "body": [
       "<?= view_cell('App\\\\Cells\\\\Components\\\\Boom\\\\AutoComplete\\\\AutoCompleteCell', [",
-      "\t\"id\" => \"${1:autocomplete-id}\",",
+      "\t\"name\" => \"${5:field_name}\",",
       "\t\"class\" => \"${2:}\",",
       "\t\"placeholder\" => \"${3:Digite para buscar...}\",",
       "\t\"required\" => ${4|true,false|},",
-      "\t\"name\" => \"${5:field_name}\",",
       "\t\"value\" => \"${6:}\",",
-      "\t\"dataUrl\" => \"${7:/api/autocomplete}\"",
       "]) ?>"
     ],
     "description": "Boom snippet para criar um AutoCompleteCell com todos os parâmetros"

@@ -2,17 +2,24 @@
   "boom_datatables_init": {
     "prefix": ["boom_datatables_init"],
     "body": [
-      "\\$table = \\$('table.table');",
+      "const \\$table = \\$('table.table');",
       "",
-      "const dataTable = initDefaultDataTable(\\$table, {",
-      "    ajax: {",
-      "        url: baseUrl.concat('ajax/datatables/default/${1:model-sem-sufix-e-minusculo}'),",
-      "    },",
-      "    columns: [",
-      "        { title: '', data: 'id', searchable: true},",
-      "        // Adicione outras colunas aqui",
-      "    ],",
-      "});"
+      "(async () => {",
+      "  try {",
+      "    const dataTable = await initDefaultDataTable(\\$table, {",
+      "      ajax: {",
+      "          url: baseUrl.concat('ajax/datatables/default/${1:model-sem-sufix-e-minusculo}'),",
+      "      },",
+      "      columns: [",
+      "          { title: '', data: 'id', searchable: true},",
+      "          // Adicione outras colunas aqui",
+      "      ],",
+      "    });",
+      "  //Events ...",
+      "  } catch (error) {",
+      "    console.error('Erro ao inicializar DataTable:', error);",
+      "  }",
+      "})();"
     ],
     "description": "Boom snippet para inicializar DataTable com URL dinâmico"
   }

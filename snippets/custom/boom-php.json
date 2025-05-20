@@ -67,8 +67,7 @@
       "// AutoComplete",
       "protected array \\$autoCompleteSelect = ['maintable.*', 'jointabela.uf'];",
       "protected array \\$autoCompleteJoins = [['jointable', 'jointable.id = maintable.estado_id']];",
-      "protected array \\$autoCompleteGroupBy = ['table.column'];",
-      "protected array \\$autoCompleteSearchable = ['maintable.nome', 'maintable.cidade', 'jointable.uf'];"
+      "protected array \\$autoCompleteGroupBy = ['table.column'];"
     ],
     "description": "Boom autocomplete preset"
   },

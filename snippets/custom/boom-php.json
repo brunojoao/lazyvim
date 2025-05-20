@@ -190,9 +190,20 @@
     ],
     "description": "Boom snippet para criar um AutoCompleteCell com todos os parâmetros"
   },
+  "boom_autocomplete_html_import_css": {
+    "prefix": ["boom_autocomplete_html_import_css"],
+    "body": [
+      "<?= link_tag(base_url_cdn('jquery-ui/1.14.1/jquery-ui.min.css')); ?>",
+      "<?= link_tag(base_url_assets('globals/css/autocomplete.css')) ?>"
+    ],
+    "description": "Boom datatable preset html css"
+  },
   "boom_autocomplete_html_import_js": {
     "prefix": ["boom_autocomplete_html_import_js"],
-    "body": ["<?= script_tag(base_url_assets('ajax/autocomplete.init.js')) ?>"],
+    "body": [
+		"<?= script_tag(base_url_cdn('jquery-ui/1.14.1/jquery-ui.min.js')); ?>",
+		"<?= script_tag(base_url_assets('ajax/autocomplete.init.js')) ?>"
+	],
     "description": "Boom datatable preset html js"
   }
 }

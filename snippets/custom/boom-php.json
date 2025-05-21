@@ -192,10 +192,10 @@
   "boom_permission_param": {
     "prefix": ["boom_permission_param"],
     "body": [
-      "\t\\$paramPermission = \\$this->checkParamAdminsOrOwner(\\$loggedOption->value ?? null, \\$loggedOption);",
-      "\t\tif(!\\$paramPermission){",
-      "\t\t\treturn \\$this->responseJsonCsrfConflict(\"Sua mensagem aqui, você também pode usar flashRedirectError\");",
-      "\t}"
+      "\\$paramPermission = \\$this->checkParamAdminsOrOwner(\\$loggedOption->value ?? null, \\$loggedOption);",
+      "\tif(!\\$paramPermission){",
+      "\t\treturn \\$this->responseJsonCsrfConflict(\"Sua mensagem aqui, você também pode usar flashRedirectError\");",
+      "}"
     ],
     "description": "Verifica permissão de parâmetro para admins ou dono do registro"
   },

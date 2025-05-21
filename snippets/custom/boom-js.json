@@ -22,5 +22,21 @@
       "})();"
     ],
     "description": "Boom snippet para inicializar DataTable com URL dinâmico"
+  },
+  "boom_autocomplete_init": {
+    "prefix": ["boom_autocomplete_init"],
+    "body": [
+      "const \\$inputAutoComplete = \\$('input.${1:name}');",
+      "",
+      "(async () => {",
+      "  try {",
+      "    await initDefaultAutoComplete(\\$inputAutoComplete, {",
+      "      url: baseUrl.concat('ajax/autocomplete/default/${2:model}')",
+	  "  } catch (error) {",
+      "    console.error('Erro ao inicializar AutoComplete:', error);",
+      "  }",
+      "})();"
+    ],
+    "description": "Boom snippet para inicializar AutoComplete com URL dinâmico"
   }
 }

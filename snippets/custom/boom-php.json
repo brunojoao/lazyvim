@@ -49,6 +49,7 @@
     "body": [
       "use DataTablesTrait;",
       "",
+      "// DataTables",
       "protected array \\$dataTableSelect = ['maintable.*', 'jointabela.uf'];",
       "protected array \\$dataTableSelectCount = ['table.column' => 'alias_data'];",
       "protected array \\$dataTableJoins = [['jointable', 'jointable.id = maintable.estado_id']];",
@@ -57,6 +58,18 @@
       "protected array \\$dataTableSearchableColumnMap = ['data' => 'table.column'];"
     ],
     "description": "Boom datatable preset"
+  },
+  "boom_autocomplete_model_trait": {
+    "prefix": ["boom_autocomplete_model_trait"],
+    "body": [
+      "use AutoCompleteTrait;",
+      "",
+      "// AutoComplete",
+      "protected array \\$autoCompleteSelect = ['maintable.*', 'jointabela.uf'];",
+      "protected array \\$autoCompleteJoins = [['jointable', 'jointable.id = maintable.estado_id']];",
+      "protected array \\$autoCompleteGroupBy = ['table.column'];"
+    ],
+    "description": "Boom autocomplete preset"
   },
   "boom_cell_flashmessage": {
     "prefix": ["boom_cell_flashmessage"],
@@ -185,5 +198,21 @@
       "\t}"
     ],
     "description": "Verifica permissão de parâmetro para admins ou dono do registro"
+  },
+  "boom_autocomplete_html_import_css": {
+    "prefix": ["boom_autocomplete_html_import_css"],
+    "body": [
+      "<?= link_tag(base_url_cdn('jquery-ui/1.14.1/jquery-ui.min.css')); ?>",
+      "<?= link_tag(base_url_assets('globals/css/autocomplete.css')) ?>"
+    ],
+    "description": "Boom datatable preset html css"
+  },
+  "boom_autocomplete_html_import_js": {
+    "prefix": ["boom_autocomplete_html_import_js"],
+    "body": [
+      "<?= script_tag(base_url_cdn('jquery-ui/1.14.1/jquery-ui.min.js')); ?>",
+      "<?= script_tag(base_url_assets('ajax/autocomplete.init.js')) ?>"
+    ],
+    "description": "Boom datatable preset html js"
   }
 }

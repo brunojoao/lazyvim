@@ -54,7 +54,7 @@
       "protected array \\$dataTableSelectCount = ['table.column' => 'alias_data'];",
       "protected array \\$dataTableJoins = [['jointable', 'jointable.id = maintable.estado_id']];",
       "protected array \\$dataTableGroupBy = ['table.column'];",
-      "protected array \\$dataTableSearchable = ['maintable.nome', 'maintable.cidade', 'jointable.uf'];",
+      "protected array \\$dataTableSearchableOuter = ['maintable.nome', 'maintable.cidade', 'jointable.uf'];",
       "protected array \\$dataTableSearchableColumnMap = ['data' => 'table.column'];"
     ],
     "description": "Boom datatable preset"

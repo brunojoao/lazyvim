@@ -175,19 +175,29 @@
     ],
     "description": "Snippet para redirecionar com mensagem de erro."
   },
-  "boom_cell_autocomplete": {
+  "boom_autocomplete_html_cell": {
     "prefix": ["boom_cell_autocomplete"],
     "body": [
       "<?= view_cell('App\\\\Cells\\\\Components\\\\Boom\\\\AutoComplete\\\\AutoCompleteCell', [",
-      "\t\"name\" => \"${5:field_name}\",",
+      "\t\"name\" => \"${1:field_name}\",",
       "\t\"class\" => \"${2:}\",",
       "\t\"placeholder\" => \"${3:Digite para buscar...}\",",
       "\t\"required\" => ${4|true,false|},",
-      "\t\"value\" => \"${6:}\",",
-      "\t\"valueId\" => \"${7:}\",",
+      "\t\"value\" => \"${5:}\",",
+      "\t\"valueId\" => \"${6:}\",",
       "]) ?>"
     ],
     "description": "Boom snippet para criar um AutoCompleteCell com todos os parâmetros"
+  },
+  "boom_permission_param": {
+    "prefix": ["boom_permission_param"],
+    "body": [
+      "\\$paramPermission = \\$this->checkParamAdminsOrOwner(\\$loggedOption->value ?? null, \\$loggedOption);",
+      "\tif(!\\$paramPermission){",
+      "\t\treturn \\$this->responseJsonCsrfConflict(\"Sua mensagem aqui, você também pode usar flashRedirectError\");",
+      "}"
+    ],
+    "description": "Verifica permissão de parâmetro para admins ou dono do registro"
   },
   "boom_autocomplete_html_import_css": {
     "prefix": ["boom_autocomplete_html_import_css"],
@@ -200,9 +210,9 @@
   "boom_autocomplete_html_import_js": {
     "prefix": ["boom_autocomplete_html_import_js"],
     "body": [
-		"<?= script_tag(base_url_cdn('jquery-ui/1.14.1/jquery-ui.min.js')); ?>",
-		"<?= script_tag(base_url_assets('ajax/autocomplete.init.js')) ?>"
-	],
+      "<?= script_tag(base_url_cdn('jquery-ui/1.14.1/jquery-ui.min.js')); ?>",
+      "<?= script_tag(base_url_assets('ajax/autocomplete.init.js')) ?>"
+    ],
     "description": "Boom datatable preset html js"
   }
 }

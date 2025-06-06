@@ -192,7 +192,7 @@
   "boom_permission_param": {
     "prefix": ["boom_permission_param"],
     "body": [
-      "\\$paramPermission = \\$this->checkParamAdminsOrOwner(\\$loggedOption->value ?? null, \\$loggedOption);",
+      "\\$paramPermission = \\$this->checkParamAdminsOrOwner(\\$organizacaoId, LoggedOptionsEnum::ORGANIZACAO);",
       "\tif(!\\$paramPermission){",
       "\t\treturn \\$this->responseJsonCsrfConflict(\"Sua mensagem aqui, você também pode usar flashRedirectError\");",
       "}"

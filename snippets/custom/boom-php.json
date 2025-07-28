@@ -74,7 +74,7 @@
   "boom_cell_boomia": {
     "prefix": ["boom_cell_boomia"],
     "body": [
-      "<?= view_cell('App\\Cells\\Components\\Boom\\Boomia\\SuggestCell'); ?>"
+      "<?= view_cell('App\\Cells\\Components\\Boom\\Boomia\\SuggestCell', ${1:promp}); ?>"
     ],
     "description": "Boom snippet para renderizar sugestões da Boomia"
   },

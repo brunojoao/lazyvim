@@ -71,6 +71,13 @@
     ],
     "description": "Boom autocomplete preset"
   },
+  "boom_cell_boomia": {
+    "prefix": ["boom_cell_boomia"],
+    "body": [
+      "<?= view_cell('App\\Cells\\Components\\Boom\\Boomia\\SuggestCell'); ?>"
+    ],
+    "description": "Boom snippet para renderizar sugestões da Boomia"
+  },
   "boom_cell_flashmessage": {
     "prefix": ["boom_cell_flashmessage"],
     "body": [

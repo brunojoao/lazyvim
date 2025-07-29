@@ -71,10 +71,17 @@
     ],
     "description": "Boom autocomplete preset"
   },
-  "boom_cell_boomia": {
-    "prefix": ["boom_cell_boomia"],
+  "boom_cell_boomia_buttons": {
+    "prefix": ["boom_cell_boomia_buttons"],
     "body": [
-      "<?= view_cell('App\\Cells\\Components\\Boom\\Boomia\\SuggestCell', ['suggest' => \\$boomiaSuggest]); ?>"
+      "<?= view_cell('App\\Cells\\Components\\Boom\\Boomia\\ButtonsCell'); ?>"
+    ],
+    "description": "Boom snippet para renderizar botões da Boomia"
+  },
+  "boom_cell_boomia_modal": {
+    "prefix": ["boom_cell_boomia_modal"],
+    "body": [
+      "<?= view_cell('App\\Cells\\Components\\Boom\\Boomia\\ModalCell'); ?>"
     ],
     "description": "Boom snippet para renderizar sugestões da Boomia"
   },

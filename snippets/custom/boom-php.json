@@ -73,7 +73,7 @@
     "description": "Boom snippet para renderizar Boomia Suggest botão"
   },
   "boom_cell_boomia_button_list_options": {
-    "prefix": ["boom_cell_boomia_button_suggest"],
+    "prefix": ["boom_cell_boomia_button_list_options"],
     "body": [
       "<?= view_cell('App\\Cells\\Components\\Boom\\Boomia\\ButtonListOptionsCell', ['dataTarget' => '${1}']); ?>"
     ],

@@ -100,7 +100,7 @@
       "\t\"id\" => \"${1:optional}\",",
       "\t\"class\" => \"${2:text|text-hover|null(optional)}\",",
       "\t\"icon\" => \"${3:fa-plus}\",",
-      "\t\"href\" => route_to(${4:modules.})|optional,",
+      "\t\"href\" => route_to(${4:modules})|optional,",
       "\t\"label\" => \"${5:message}\"",
       "]) ?>"
     ],

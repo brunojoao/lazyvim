@@ -1,5 +1,5 @@
 return {
-  "echasnovski/mini.move",
+  "nvim-mini/mini.move",
   lazy = false,
   config = function()
     local minimove = require "mini.move"

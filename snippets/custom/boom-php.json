@@ -79,6 +79,13 @@
     ],
     "description": "Boom snippet para renderizar Boomia List Options botão"
   },
+  "boom_cell_boomia_button_document": {
+    "prefix": ["boom_cell_boomia_button_document"],
+    "body": [
+      "<?= view_cell('App\\Cells\\Components\\Boom\\Boomia\\ButtonDocumentCell'); ?>"
+    ],
+    "description": "Boom snippet para renderizar Boomia Document botão"
+  },
   "boom_cell_boomia_modal": {
     "prefix": ["boom_cell_boomia_modal"],
     "body": [

@@ -1,0 +1,27 @@
+-- return {
+--   "stevearc/conform.nvim",
+--   lazy = true,
+--   event = { "BufReadPre", "BufNewFile" },
+--   config = function()
+--     local conform = require("conform")
+--
+--     conform.setup({
+--       formatters_by_ft = {
+--         php = { "php" },
+--       },
+--       notify_on_error = true,
+--       formatters = {
+--         php = {
+--           command = "php-cs-fixer",
+--           args = {
+--             "fix",
+--             "$FILENAME",
+--             "--config=/seu/caminho/para/o/arquivo/de/configuracao/[filename].php",
+--             "--allow-risky=yes",
+--           },
+--           stdin = false,
+--         },
+--       },
+--     })
+--   end,
+-- }

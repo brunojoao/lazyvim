@@ -32,9 +32,9 @@ return {
     -- Fim dos parâmetros de configuração da versão 1 do php-cs-fixer
 
     -- Se você usar a versão 2.x do php-cs-fixer
-    vim.g.php_cs_fixer_rules = "@PSR2" -- opções: --rules (default:@PSR2)
+    -- vim.g.php_cs_fixer_rules = "@PSR2"              -- opções: --rules (default:@PSR2)
     -- vim.g.php_cs_fixer_cache = ".php_cs.cache"      -- opções: --cache-file
-    -- vim.g.php_cs_fixer_config_file = '.php_cs'      -- opções: --config
+    vim.g.php_cs_fixer_config_file = ".php-cs-fixer.php" -- usa o config do projeto
     vim.g.php_cs_fixer_allow_risky = "yes" -- opções: --allow-risky
     -- Fim dos parâmetros de configuração da versão 2 do php-cs-fixer
 
@@ -45,12 +45,13 @@ return {
     -- vim.g.php_cs_fixer_ignore_env = 1                 -- Ignorar quaisquer requisitos de ambiente
     --
     --
-    -- Autocomando para php-cs-fixer
-    vim.api.nvim_create_autocmd("BufWritePost", {
-      pattern = "*.php",
-      callback = function()
-        vim.cmd("silent! call PhpCsFixerFixFile()")
-      end,
-    })
+    -- Autocomando para php-cs-fixer desativado
+    -- (usar manualmente com <leader>cpf para não conflitar com config do projeto)
+    -- vim.api.nvim_create_autocmd("BufWritePost", {
+    --   pattern = {"*.php", "*.phtml"},
+    --   callback = function()
+    --     vim.cmd("silent! call PhpCsFixerFixFile()")
+    --   end,
+    -- })
   end,
 }

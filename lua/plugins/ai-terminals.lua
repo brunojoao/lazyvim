@@ -13,21 +13,14 @@ return {
         },
         aider = {
           cmd = function()
-            -- Tenta pegar do ambiente atual
-            local key = vim.env.GEMINI_API_KEY
-
-            -- Se estiver vazio, vamos tentar extrair direto do .bashrc via shell
-            if not key or key == "" then
-              key = vim.fn.system("source ~/.bashrc && echo -n $GEMINI_API_KEY")
-            end
-
-            local base_cmd = "aider --model gemini/gemini-1.5-flash-latest --watch-files"
-
-            if key and key ~= "" then
-              -- Exportamos ambas para não ter erro de versão do Aider
-              return string.format("export GEMINI_API_KEY=%s GOOGLE_API_KEY=%s && %s", key, key, base_cmd)
+            local gemini_api_key = vim.env.GEMINI_API_KEY
+            local base_cmd = "aider --model gemini/gemini-2.5-flash --watch-files"
+            if gemini_api_key then
+              return "GEMINI_API_KEY=" .. gemini_api_key .. " " .. base_cmd
             else
-              -- Se nem assim achar, retorna o base pra você ver o erro do Aider
+              -- Se a variável GEMINI_API_KEY não estiver definida em vim.env,
+              -- o comando será executado sem ela explicitamente definida aqui,
+              -- contando com a herança do ambiente do shell.
               return base_cmd
             end
           end,

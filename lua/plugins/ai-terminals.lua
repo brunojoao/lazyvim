@@ -14,7 +14,7 @@ return {
         aider = {
           cmd = function()
             local gemini_api_key = vim.env.GEMINI_API_KEY
-            local base_cmd = "aider --model gemini/gemini-2.5-flash --watch-files"
+            local base_cmd = "aider --model gemini/gemini-2.5-pro --watch-files"
             if gemini_api_key then
               return "GEMINI_API_KEY=" .. gemini_api_key .. " " .. base_cmd
             else

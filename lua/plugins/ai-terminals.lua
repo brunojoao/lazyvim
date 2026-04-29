@@ -17,11 +17,6 @@ return {
           end,
           path_header_template = "`%s`",
         },
-        goose = {
-          cmd = function()
-            return string.format("GOOSE_CLI_THEME=%s goose", vim.o.background)
-          end,
-        },
       },
       -- One line to get consistent mappings for all terminals
       auto_terminal_keymaps = {

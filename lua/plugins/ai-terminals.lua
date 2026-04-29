@@ -38,7 +38,6 @@ return {
       require("ai-terminals").setup(opts)
       -- Optional: integrate Snacks pickers with add-file actions
       local sa = require("ai-terminals.snacks_actions")
-      require("snacks").setup({}) -- or your existing Snacks opts
       sa.apply(require("snacks").config) -- merges actions + safe default picker keys
     end,
   },

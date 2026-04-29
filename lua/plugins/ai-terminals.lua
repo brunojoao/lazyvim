@@ -13,7 +13,7 @@ return {
         },
         aider = {
           cmd = function()
-            return "aider --model gemini/gemini-2.5-flash-latest --watch-files"
+            return "aider --model gemini/gemini-2.5-flash --watch-files"
           end,
           path_header_template = "`%s`",
         },

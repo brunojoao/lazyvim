@@ -1,14 +1,45 @@
+-- lua/plugins/ai-terminals.lua
 return {
-  "aweis89/ai-terminals.nvim",
-  lazy = false,
-  dependencies = { "folke/snacks.nvim" },
-  opts = {
-    auto_terminal_keymaps = {
-      prefix = "<leader>a",
+  {
+    "aweis89/ai-terminals.nvim",
+    dependencies = { "folke/snacks.nvim" },
+    opts = {
+      -- Optional: customize commands and per-terminal formatting
       terminals = {
-        { name = "claude", key = "c" },
-        { name = "aider", key = "a" },
+        claude = {
+          cmd = function()
+            return "claude"
+          end,
+        },
+        aider = {
+          cmd = function()
+            return "aider --watch-files"
+          end,
+          path_header_template = "`%s`",
+        },
+        goose = {
+          cmd = function()
+            return string.format("GOOSE_CLI_THEME=%s goose", vim.o.background)
+          end,
+        },
+      },
+      -- One line to get consistent mappings for all terminals
+      auto_terminal_keymaps = {
+        prefix = "<leader>a",
+        terminals = {
+          { name = "claude", key = "c" },
+          { name = "aider", key = "a" },
+          { name = "goose", key = "g" },
+          -- { name = "cursor", key = "r", enabled = false }, -- example disabled
+        },
       },
     },
+    config = function(_, opts)
+      require("ai-terminals").setup(opts)
+      -- Optional: integrate Snacks pickers with add-file actions
+      local sa = require("ai-terminals.snacks_actions")
+      require("snacks").setup({}) -- or your existing Snacks opts
+      sa.apply(require("snacks").config) -- merges actions + safe default picker keys
+    end,
   },
 }

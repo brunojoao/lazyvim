@@ -7,7 +7,6 @@ return {
       terminals = {
         { name = "claude", key = "c" },
         { name = "aider", key = "a" },
-        { name = "goose", key = "g" },
       },
     },
   },

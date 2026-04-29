@@ -22,8 +22,8 @@ return {
       auto_terminal_keymaps = {
         prefix = "<leader>a",
         terminals = {
-          { name = "claude", key = "c", desc = "Claude" },
-          { name = "aider", key = "a", desc = "Aider" },
+          { name = "claude", key = "c" },
+          { name = "aider", key = "a" },
           -- { name = "cursor", key = "r", enabled = false }, -- example disabled
         },
       },

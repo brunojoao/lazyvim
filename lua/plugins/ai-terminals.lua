@@ -6,11 +6,6 @@ return {
     opts = {
       -- Optional: customize commands and per-terminal formatting
       terminals = {
-        claude = {
-          cmd = function()
-            return "claude"
-          end,
-        },
         aider = {
           cmd = function()
             local gemini_api_key = vim.env.GEMINI_API_KEY
@@ -31,7 +26,6 @@ return {
       auto_terminal_keymaps = {
         prefix = "<leader>a",
         terminals = {
-          { name = "claude", key = "c" },
           { name = "aider", key = "a" },
           -- { name = "cursor", key = "r", enabled = false }, -- example disabled
         },

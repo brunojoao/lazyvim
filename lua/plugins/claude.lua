@@ -3,6 +3,34 @@ return {
   dependencies = { "folke/snacks.nvim" },
   opts = {
     terminal_cmd = "~/.local/bin/claude", -- Point to local installation
+    terminal = {
+      -- A TUI do Claude redesenha a tela continuamente (spinner + streaming).
+      -- Dentro de um :terminal isso vira uma enxurrada de eventos de redraw no
+      -- canal RPC e o cliente TUI do Neovim acaba parando de pintar — a tela
+      -- congela enquanto servidor e Claude seguem vivos.
+      -- Rodando por fora, o Neovim mantém só o servidor MCP: Send, Add, diffs
+      -- e o Neo-tree continuam funcionando.
+      provider = "external",
+      provider_opts = {
+        -- Retornar tabela => o plugin usa como argv direto, sem shell-split.
+        --   -u  : desativa o DBus. Sem isso o Terminator reaproveita a instância
+        --         já aberta e a nova aba herdaria o ambiente DELA, perdendo
+        --         CLAUDE_CODE_SSE_PORT / ENABLE_IDE_INTEGRATION.
+        --   -x  : usa o resto dos argumentos como o comando a executar.
+        --   sh -c: expande o "~" de terminal_cmd e os args (--resume, --continue).
+        external_terminal_cmd = function(cmd, _env)
+          return {
+            "terminator",
+            "-u",
+            "--working-directory=" .. vim.fn.getcwd(),
+            "-x",
+            "sh",
+            "-c",
+            cmd,
+          }
+        end,
+      },
+    },
   },
   config = true,
   keys = {
